@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ # Ethixweb — Digital Solutions for Businesses
+
+Ethixweb is a responsive business website built to showcase digital services and collect customer enquiries. It includes a contact form, email notifications, Supabase database storage, and a protected admin dashboard.
+
+## Live Website
+
+https://ethixweb-india1.vercel.app/
+
+## Features
+
+- Responsive homepage, About, Services, and Contact pages
+- Contact form for customer enquiries
+- Email notifications using Resend
+- Enquiry storage using Supabase
+- Secure admin authentication
+- Admin dashboard to view enquiries
+- Enquiry status management: New, In Progress, and Completed
+- Deployed on Vercel
+
+## Tech Stack
+
+- Next.js with App Router
+- TypeScript
+- Tailwind CSS
+- Lucide React
+- Supabase Authentication and Database
+- Resend for email notifications
+- Vercel for deployment
+
+## Design Rationale
+
+The website uses a clean, modern layout with simple navigation so visitors can easily explore services and contact the business. Responsive styling supports both mobile and desktop screens. The contact form provides a direct enquiry channel, while the admin dashboard helps authorized users organize and track enquiries.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js
+- npm
+- A Supabase project
+- A Resend account for email notifications
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Aabha1121/ethixweb-india1.git
+cd ethixweb-india1
+npm install
+```
+
+Create a `.env.local` file in the project root and configure the required environment variables:
+
+- `SUPABASE_URL`
+- `SUPABASE_SECRET_KEY`
+- `RESEND_API_KEY`
+- `ENQUIRY_RECEIVER_EMAIL`
+- `RESEND_FROM_EMAIL`
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `ADMIN_EMAIL`
+
+Never publish real secret values in this file or on GitHub.
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## PageSpeed Insights Results
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tested on October 14, 2026.
 
-## Learn More
+| Category | Mobile | Desktop |
+|---|---:|---:|
+| Performance | 100 | 100 |
+| Accessibility | 95 | 95 |
+| Best Practices | 100 | 100 |
+| SEO | 100 | 100 |
 
-To learn more about Next.js, take a look at the following resources:
+These are the scores recorded in the PageSpeed Insights reports. Results can vary between tests.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The website is deployed on Vercel:
 
-## Deploy on Vercel
+https://ethixweb-india1.vercel.app/
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Security
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Keep `.env.local` private and excluded from Git.
+- Never expose Supabase secret keys or Resend API keys.
+- Restrict dashboard access to authorized administrators.
+
