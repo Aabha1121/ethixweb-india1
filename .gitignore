@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local project backup
+ethixweb-project.zip
+ethixweb-project.zip.lnk
